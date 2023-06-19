@@ -1,4 +1,4 @@
-# @polkadot/apps
+# madara-app
 
 A Portal into the Polkadot and Substrate networks. Provides a view and interaction layer from a browser.
 
@@ -18,7 +18,7 @@ The repo is split into a number of packages, each representing an application.
 
 Contributions are welcome!
 
-To start off, this repo (along with others in the [@polkadot](https://github.com/polkadot-js/) family) uses yarn workspaces to organize the code. As such, after cloning dependencies _should_ be installed via `yarn`, not via npm, the latter will result in broken dependencies.
+To start off, this repo uses yarn workspaces to organize the code. As such, after cloning dependencies _should_ be installed via `yarn`, not via npm, the latter will result in broken dependencies.
 
 To get started -
 
@@ -35,13 +35,13 @@ To get started -
 You can run a docker container via -
 
 ```
-docker run --rm -it --name polkadot-ui -e WS_URL=ws://someip:9944 -p 80:80 jacogr/polkadot-js-apps:latest
+docker run --rm -it --name madara-ui -e WS_URL=ws://someip:9944 -p 80:80 keep-starknet-strange/madara-app:latest
 ```
 
 To build a docker container containing local changes -
 
 ```
-docker build -t jacogr/polkadot-js-apps -f docker/Dockerfile .
+docker build -t keep-starknet-strange/madara-app -f docker/Dockerfile .
 ```
 
 When using these Docker commands, you can access the UI via http://localhost:80 (or just http://localhost)
