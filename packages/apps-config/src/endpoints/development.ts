@@ -25,17 +25,43 @@ export function createCustom (t: TFunction): LinkOption[] {
     ? [
       {
         isHeader: true,
-        text: t('rpc.dev.custom', 'Custom environment', { ns: 'apps-config' }),
+        text: t('rpc.dev.custom', 'Sharingan', { ns: 'apps-config' }),
         textBy: '',
-        ui: {},
+        ui: {
+          color: '#000000',
+          logo: nodesMadaraPNG
+        },
         value: ''
       },
       {
         info: 'WS_URL',
-        text: t('rpc.dev.custom.entry', 'Custom {{WS_URL}}', { ns: 'apps-config', replace: { WS_URL } }),
-        textBy: WS_URL,
-        ui: {},
-        value: WS_URL
+        text: t('rpc.dev.custom.entry', 'sharingan env', { ns: 'apps-config', replace: { WS_URL } }),
+        textBy: 'wss://sharingan.madara.zone',
+        ui: {
+          color: '#000000',
+          logo: nodesMadaraPNG
+        },
+        value: 'wss://sharingan.madara.zone'
+      },
+      {
+        isHeader: true,
+        text: t('rpc.dev.custom', 'Rinnegan', { ns: 'apps-config' }),
+        textBy: '',
+        ui: {
+          color: '#000000',
+          logo: nodesMadaraPNG
+        },
+        value: ''
+      },
+      {
+        info: 'WS_URL',
+        text: t('rpc.dev.custom.entry', 'rinnegan env', { ns: 'apps-config', replace: { WS_URL } }),
+        textBy: 'wss://rinnegan.madara.zone',
+        ui: {
+          color: '#900000',
+          logo: nodesMadaraPNG
+        },
+        value: 'wss://rinnegan.madara.zone'
       }
     ]
     : [];
